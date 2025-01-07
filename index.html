@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAILYBAND-Lucy</title>
+    <style>
+        /* DAILYBAND-lucy.css 내용 */
+        body {
+            background-color: rgb(230, 230, 230);
+            margin: 0 auto;   
+        }
+        #wrap {
+            background-color: #ddeafc;
+            width: 1300px;
+            height: 3920px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #header {
+            background-color: #0066ff;
+            width: 1300px;
+            height: 200px;
+            text-align: center;
+            margin-top: 0;
+            position: fixed;
+            transition: background-color 0.5s ease;
+        }
+        #logo {
+            height: 150px;
+            margin: 0;
+        }
+        #header:hover {
+            background-color: #0066ff59;
+        }
+        li {
+            display: inline;
+            padding: 0 15px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        a:hover {
+            color: #0066ff;
+        }
+        #introduce {
+            margin-top: 200px;
+        }
+        table {
+            float: right;
+            margin-right: 35px;
+        }
+        .background {
+            background-color: #0066ff;
+            color: white;
+            text-align: center; 
+        }
+        #groupphoto {
+            margin-left: 35px;
+        }
+        #gallery {
+            clear: both; 
+            text-align: center; 
+            margin-top: 50px;
+        }
+        #review, #songrecommendation {
+            margin: 0;
+        }
+        #SIDEMENU {
+            clear: both;
+            float: right;
+            margin: 0 80px 0 0 ;
+            padding: 0;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        #SIDEMENU img {
+            width: 100px;
+            transition: transform 0.5s ease;
+        }
+        #SIDEMENU img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <script>
+        // scroll_menu.js 내용
+        $(function () {
+            $('.mov').click(function () {
+                var ss = $(this).attr("href");
+                $('html, body').animate({ scrollTop: ss });
+                return false;
+            });
+        });
+
+        // side_menu.js 내용
+        function InitializeStaticMenu() {
+            const SIDEMENU = document.getElementById('SIDEMENU');
+            SIDEMENU.style.right = '10px';
+            SIDEMENU.style.top = '400px';
+        }
+    </script>
+</head>
+<body onload="InitializeStaticMenu();">
+    <div id="SIDEMENU">
+        <a href="main.html">
+            <img src="img/SIDEMENU.png" alt="sidemenu"><br>
+            메인페이지
+        </a>
+    </div>
+    <div id="wrap">
+        <div id="header">
+            <div id="logo">
+                <img src="img/lucy/headerlogo.png" alt="header logo">
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="0" class="mov">소개</a></li>
+                    <li><a href="749.5" class="mov">사진첩</a></li>
+                    <li><a href="2107.5" class="mov">무대후기</a></li>
+                    <li><a href="2975.5" class="mov">노래추천</a></li>		
+                </ul>
+            </div>
+        </div>
+        <div id="introduce">
+            <h1>▶ 소개</h1>
+            <table border="1">
+                <tr>
+                    <td class="background">데뷔</td>
+                    <td>&nbsp;2020년 5월 8일</td>
+                </tr>
+                <tr>
+                    <td class="background">데뷔곡</td>
+                    <td>&nbsp;싱글 1집 DEAR. (개화)</td>
+                </tr>
+                <tr>
+                    <td class="background">멤버</td>
+                    <td>&nbsp;신예찬(리더, 바이올린), 최상엽(보컬, 기타), 조원상(베이스, 프로듀싱), 신광일(드럼, 보컬)</td>
+                </tr>
+                <tr>
+                    <td class="background">팬덤</td>
+                    <td>&nbsp;왈왈이</td>
+                </tr>
+            </table>
+            <div id="groupphoto">
+                <img src="img/lucy/groupphoto.jpg" alt="단체사진">
+            </div>
+        </div>
+        <!-- Add more content here... -->
+    </div>
+</body>
+</html>
